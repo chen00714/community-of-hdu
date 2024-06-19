@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>头部导航示例</title>
+    <style>
+        /* 头部导航容器样式 */
+        .header-container {
+            width: 1280px; /* 设置容器宽度 */
+            height: 90px; /* 设置容器高度 */
+            background-color: #f8f8f8; /* 背景颜色 */
+            position: relative; /* 相对定位，便于放置logo和导航链接 */
+            margin: 0 auto; /* 居中显示 */
+            box-sizing: border-box; /* 边框计算在宽度内 */
+        }
+
+        /* Logo样式 */
+        .logo {
+            width: 271px; /* 设置logo宽度 */
+            height: 90px; /* 设置logo高度 */
+            background-color: #007BFF; /* Logo背景颜色 */
+            text-align: center; /* 文本居中 */
+            line-height: 90px; /* 行高与logo高度一致，使文本垂直居中 */
+            color: white; /* 文字颜色 */
+            float: left; /* 浮动到左侧 */
+            font-size: 24px; /* Logo文字大小 */
+            font-weight: bold; /* 字体加粗 */
+        }
+
+        /* 导航链接样式 */
+        .navigation-links {
+            float: left; /* 浮动到右侧 */
+            margin: 0; /* 去除外边距 */
+            padding: 0; /* 去除内边距 */
+            list-style: none; /* 去除列表项的默认样式 */
+        }
+
+        .navigation-links li {
+            display: inline-block; /* 列表项显示为内联块级元素 */
+            margin-left: 54px; /* 设置列表项之间的间距 */
+            font-size: 16px; /* 设置字号 */
+            line-height: 90px; /* 行高与导航高度一致，使文本垂直居中 */
+        }
+
+        .navigation-links a {
+            text-decoration: none; /* 去除下划线 */
+            color: #333; /* 链接颜色 */
+        }
+
+        /* 鼠标悬停效果 */
+        .navigation-links a:hover {
+            text-decoration: underline; /* 鼠标悬停时添加下划线 */
+        }
+
+        /* 搜索按钮样式 */
+        .search-button {
+            display: inline-block;
+            width: 40px; /* 搜索按钮宽度 */
+            height: 40px; /* 搜索按钮高度 */
+            background-color: #007BFF; /* 按钮背景颜色 */
+            color: white; /* 文字颜色 */
+            text-align: center;
+            line-height: 40px; /* 行高与按钮高度一致，使文本垂直居中 */
+            cursor: pointer; /* 鼠标悬停时显示手形图标 */
+            border-radius: 20px; /* 按钮圆角 */
+        }
+     </style>
+      <style>
+        /* 轮播容器样式 */
+        .carousel {
+            width: 1280px;
+            height: 832px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden; /* 隐藏超出部分 */
+        }
+
+        /* 轮播图片容器样式 */
+        .carousel-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 0.5s ease; /* 平滑过渡效果 */
+        }
+
+        /* 单个轮播图片样式 */
+        .carousel-item {
+            width: 100%;
+            height: 100%;
+            float: left;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* 控制按钮样式 */
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.976);
+            border: none;
+            cursor: pointer;
+        }
+
+        .carousel-control.prev {
+            left: 10px;
+        }
+
+        .carousel-control.next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header-container">
+    <div class="logo">LOGO</div>
+    <ul class="navigation-links">
+         <li>  
+            <a href=1 class="navigation-links">学院概况</a>
+         </li>     
+         <li class="nav" _t_nav="1021">
+            <a href=2  class="navigation-links">科教信息</a>
+         </li>     
+         <li class="nav" _t_nav="1005">
+            <a href=3 class="navigation-links">招生就业</a>
+         </li>     
+         <li class="nav" _t_nav="1026">
+            <a href=4 class="navigation-links">学生天地</a>
+         </li>     
+         <li class="nav" _t_nav="1030">
+            <a href=5 class="navigation-links">作品之窗</a>
+         </li>     
+         <li class="nav" _t_nav="1058">
+            <a href=6 class="navigation-links">下载中心</a>
+         </li>        
+         <li _t_nav="search" class="search">
+            <a href="javascript:;"><img src="/Users/chenjiajia/Downloads/代码/搜索图片.svg" alt="" ></a>
+        </li>
+         <div class="search-button">搜索</a></div>
+    </ul>
+</div>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <!-- 轮播图片项 -->
+            <div class="carousel-item" style="background-image: url('/Users/chenjiajia/Downloads/文稿/代码/多媒体素材/1c5e6e00-047a-44f1-a8b2-6e1db922f80d.png');"></div>
+            <div class="carousel-item" style="background-image: url('/Users/chenjiajia/Downloads/文稿/代码/多媒体素材/1a9cc2ce-0823-4abe-8414-d4c934382f84.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('/Users/chenjiajia/Downloads/文稿/代码/多媒体素材/1a9cc2ce-0823-4abe-8414-d4c934382f84.jpg');"></div>
+            <!-- 更多图片项可以继续添加 -->
+        </div>
+        <!-- 控制按钮 -->
+        <button class="carousel-control prev">&laquo;</button>
+        <button class="carousel-control next">&raquo;</button>
+    </div>
+    
+    <script>
+        // JavaScript 控制自动轮播
+        const carouselInner = document.querySelector('.carousel-inner');
+        const items = document.querySelectorAll('.carousel-item');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        let index = 0;
+    
+        function moveSlide(step) {
+            const totalWidth = carouselInner.offsetWidth;
+            carouselInner.style.transform = `translateX(-${index * totalWidth}px)`;
+        }
+    
+        function nextSlide() {
+            index = (index + 1) % items.length;
+            moveSlide(1);
+        }
+    
+        function prevSlide() {
+            index = (index - 1 + items.length) % items.length;
+            moveSlide(-1);
+        }
+    
+        prevButton.addEventListener('click', prevSlide);
+        nextButton.addEventListener('click', nextSlide);
+    
+        // 自动轮播
+        setInterval(nextSlide, 6000); // 每X秒切换到下一张图片
+    
+        // 初始化轮播
+        moveSlide(0);
+    </script>
+</body>
+</html>

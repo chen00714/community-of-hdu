@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header_wrapper">
+            <div class="log"><a href="page1.html"><img src="log.png" alt=""></a></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="https://syxy.hdu.edu.cn/2204/list.htm">学院概况</a>
+                        <ul>
+                            <li>学院介绍 <a href="https://syxy.hdu.edu.cn/2204/list.htm"></a></li>
+                            <li>学院领导 <a href="https://syxy.hdu.edu.cn/2204/list.htm"></a></li>
+                            <li>机构设置 <a href="https://syxy.hdu.edu.cn/2204/list.htm"></a></li>
+                            <li>师资队伍 <a href="https://syxy.hdu.edu.cn/2204/list.htm"></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://syxy.hdu.edu.cn/2205/list.htm">科教信息</a>
+                        <ul>
+                            <li><a href="https://syxy.hdu.edu.cn/2205/list.htm">教学信息</a></li>
+                            <li><a href="https://syxy.hdu.edu.cn/2205/list.htm">科学研究</a></li>
+                            <li><a href="https://syxy.hdu.edu.cn/2222/list.htm">实验室建设</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://syxy.hdu.edu.cn/2208/list.htm">招生就业</a>
+                        <ul>
+                            <li><a href="">招生宣传</a></li>
+                            <li><a href="">专业设置</a></li>
+                            <li><a href="">知名校友</a></li>
+                            <li><a href="">国际交流</a></li>
+                            <li><a href="">星光学子</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://syxy.hdu.edu.cn/2209/list.htm">学生天地</a>
+                        <ul>
+                            <li><a href="">学工通知</a></li>
+                            <li><a href="">学生党建</a></li>
+                            <li><a href="">科研竞赛</a></li>
+                            <li><a href="">团学活动</a></li>
+                        </ul>
+                    <li><a href="works1.html">作品之窗</a>
+                        <ul>
+                            <li><a href="">包装设计</a></li>
+                            <li><a href="">工业设计</a></li>
+                            <li><a href="">媒体设计</a></li>
+                            <li><a href="">平面设计</a></li>
+                            <li><a href="">影像技术</a></li>
+                            <li><a href="">毕业设计</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://syxy.hdu.edu.cn/2211/list.htm">下载中心</a></li>
+                </ul>
+            </div>
+            <div class="search"><a href=""><img src="searchIcon.png" alt=""></a></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="images">
+            <img src="02.jpg">
+            <img src="03.png">
+            <img src="04.png">
+            <img src="05.jpg">
+            <img src="09.png">
+        </div>
+        <div class="btm-slider">
+            <span onclick="btm_slide(1)"></span>
+            <span onclick="btm_slide(2)"></span>
+            <span onclick="btm_slide(3)"></span>
+            <span onclick="btm_slide(4)"></span>
+            <span onclick="btm_slide(5)"></span>
+        </div>
+    </div>
+
+     <!--信息流-->
+      <div class="ad">
+        <h3 class="title"><b>作品展示</b></h3>
+        <div class="ad-img">
+            <a href="#"><img src="02.jpg"></a>
+        </div>
+     
+          <div class="ad-img">
+             <a href="#"><img src="03.png"></a>
+          </div>
+    
+        <div class="ad-img">
+            <a href="#"><img src="06.jpg"></a>
+        </div>
+        <div class="ad-img">
+            <a href="#"><img src="07.jpg"></a>
+        </div>
+        <div class="ad-img">
+            <a href="#"><img src="08.jpg"></a>
+        </div>
+        <div class="ad-img">
+            <a href="#"><img src="04.png"></a>
+        </div>
+        <div class="ad-img">
+            <a href="#"><img src="02.jpg"></a>
+        </div>
+        <div class="ad-img">
+            <a href="#"><img src="09.png"></a>
+        </div>
+      </div>
+     <!--信息流-->
+  <div class="footer">
+    <div class="wrap">
+        <div class="footer-cont">
+           <ul>
+            <li>邮箱：1234567890  学院电话：12345677</li>
+            <li>隐私  网页指南  分享</li>
+           </ul>
+     </div>
+    </div>
+  </div>
+    <script>
+      var indexValue = 1;
+showimg(indexValue);
+function btm_slide(e) {
+    showimg(indexValue = e);
+}
+function showimg(e) {
+    var i;
+    const img = document.querySelectorAll('.images img'); // 确保选择器正确选择到所有图片
+    const slider = document.querySelectorAll('.btm-slider span');
+    if (e > img.length) e = 1; // 如果索引大于图片数量，重置为1
+    if (e < 1) e = img.length; // 如果索引小于1，设置为图片数量
+
+    for (i = 0; i < img.length; i++) {
+        img[i].style.display = "none"; // 隐藏所有图片
+    }
+    for (i = 0; i < slider.length; i++) {
+        slider[i].style.background = "rgba(255, 255, 255, 0.2)"; // 重置底部导航点样式
+    }
+    img[e - 1].style.display = "block"; // 显示当前选中的图片
+    slider[e - 1].style.background = "white"; // 高亮当前选中的导航点
+}
+     
+    </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+    background-color: #eaeaea;
+    z-index: 1;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+.header {
+    height: 140px;
+    width: 100vw;
+    background-color: #fff;
+    margin: 0;
+    overflow: hidden;
+
+    .header_wrapper {
+        width: 90vw;
+        height: 140px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 5; /* 确保这个值高于.content的z-index */    
+
+        .log {
+            width: 270px;
+            height: 90px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .nav {
+            flex: 2;
+            color: #969696;
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 700;
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                li {
+                    list-style: none;
+                    position: relative;
+
+                    &:hover {
+                        background-color: #eaeaea;
+                    }
+
+                    &:hover {
+                        display: block;
+                        ul {
+                            display: block;
+                        }
+                    }
+
+                    ul {
+                        display: none;
+                        position: absolute;
+                        background-color: #fff;
+                        padding: 15px 20px;
+                        position: absolute;
+                        left: 0; /* 或者根据需要调整 */
+                        top: 100%; /* 确保子菜单在父菜单项的下方 */
+
+                        li {
+                            margin: 10px 0;
+                            text-orientation: sideways;
+                            width: 5vw;
+                            text-align: center;
+
+                            &:hover {
+                                background-color: #eaeaea;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .search {
+            width: 40px;
+            height: 40px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+}
+.wrap{
+    width: 1280px;
+    height: 200px;
+    text-align: center;
+    z-index: 1; /* 确保这个值低于.header的z-index */
+}
+.content{
+    height: 400px;
+    width: 1018px;
+    overflow: hidden;
+    position: relative; /* 保持相对定位 */
+    width: 1280px; /* 或者使用max-width: 1280px; */
+    max-width: 100%; /* 确保内容不会超出视口宽度 */
+    margin: 0 auto; /* 上下边距为0，左右边距自动调整以居中 */
+    text-align: center; /* 确保内部元素水平居中 */
+    overflow: hidden;
+    z-index: 1; /* 确保这个值低于.header的z-index */
+}
+.content .images{
+    height: 100%;
+    width: 100%;
+    z-index: 1; /* 确保这个值低于.header的z-index */
+
+}
+.images img{
+    height: 100%;
+    width: 100%;
+    z-index: 1; /* 确保这个值低于.header的z-index */
+}
+.btm-slider{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+}
+.btm-slider span{
+    height: 15px;
+    width: 60px;
+    border: 3px solid white;
+    margin: 0 3px;
+    cursor: pointer;
+}
+.btm-slider span:hover{
+    background: white;
+}
+.content .slide {
+    position: absolute;
+    top:50%
+    transform: translateY(-50%);
+    width: 45px;
+    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+.content .slide :hover{
+    background: rgba(255, 255, 255, 0.2);
+
+}
+.slide span{
+    font-size: 35px;
+    color: rgba(4, 34, 97, 0.418);
+    line-height: 41px;
+}
+/* information */
+.ad{
+    width: 100%;
+    height: 500px;
+    padding: 30px 0;
+    background-color: azure;
+}
+.ad-img{
+    width: 277px;
+    height: 150px;
+    margin-left: 59px;
+    margin-top: 30px;
+    float: left;
+}
+.ad-img img{
+    width: 100%;
+    height: 100%;
+}
+.title{
+    margin-left: 50px;
+    color: rgb(4, 4, 61);
+    font-size: larger;
+}
+
+
+.footer{
+    width: 100%;
+    height: 100px;
+    line-height: 25px;
+    padding: 27px 0;
+    background-color: rgb(5, 5, 98);
+    color: aliceblue;
+    position: relative; /* 保持相对定位 */
+    width: 100%; /* 或者使用max-width: 1280px; */
+    max-width: 100%; /* 确保内容不会超出视口宽度 */
+    margin: 0 auto; /* 上下边距为0，左右边距自动调整以居中 */
+    text-align: center
+}
+.contnews{
+width: 80vw;
+margin: 20px auto 50px auto;
+  .title{
+      width: 100%;
+      display: flex;
+      font-size: 50px;
+      justify-content: left;
+      align-items: center;
+      margin-top: 20px;
+  }
+  content1{
+    width: 60vw;
+  }
+
+}
+.footer-1 {
+    width: 100%;
+    height: 100px;
+    line-height: 25px;
+    padding: 27px 0;
+    background-color: rgb(57, 80, 228);
+    color: aliceblue;
+    position: relative; /* 保持相对定位 */
+    width: 100%; /* 或者使用max-width: 1280px; */
+    max-width: 100%; /* 确保内容不会超出视口宽度 */
+    margin: 0 auto; /* 上下边距为0，左右边距自动调整以居中 */
+    text-align: center
+}
